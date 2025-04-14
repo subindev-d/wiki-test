@@ -1,0 +1,25 @@
+name: CI
+on:
+  workflow_dispatch:
+    inputs:
+      run_build:
+        description: "Build on request"
+        required: true
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+  pull_request:
+  push:
+    tags:
+      - 'v*'
+    branches:
+      - main
+      - dev
+
+jobs:
+  dev:
+    - name: Debug tag output
+        run: |
+          echo "test secret: ${{ secrets.TEST_SECRET }}"
