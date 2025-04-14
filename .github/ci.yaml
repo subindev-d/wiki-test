@@ -26,7 +26,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-  steps: 
-    - name: Debug tag output
-      run: |
-        echo "test secret: ${{ secrets.TEST_SECRET }}"
+    steps: 
+      - name: Debug tag output
+        run: |
+          echo "test secret: ${{ secrets.TEST_SECRET }}"
