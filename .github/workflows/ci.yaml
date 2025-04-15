@@ -27,8 +27,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      - shell: bash
+      - name: Build on
         env:
           TEST_SECRET: ${{ secrets.TEST_SECRET}}
         run: |
-          echo "test secret: $TEST_SECRET"
+          echo "test secret: ${TEST_SECRET:0:4}"
