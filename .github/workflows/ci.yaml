@@ -28,5 +28,7 @@ jobs:
 
     steps: 
       - name: Debug tag output
+        env:
+          TEST_SECRET: ${{ secrets.TEST_SECRET}}
         run: |
-          echo "test secret: ${{ secrets.TEST_SECRET }}"
+          echo "test secret: $TEST_SECRET"
