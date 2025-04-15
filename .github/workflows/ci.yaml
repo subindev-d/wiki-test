@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      - name: Debug tag output
+      - shell: bash
         env:
           TEST_SECRET: ${{ secrets.TEST_SECRET}}
         run: |
