@@ -29,6 +29,6 @@ jobs:
     steps: 
       - name: Build on
         env:
-          TEST_SECRET: ${{ env.MY_VAR}}
+          TEST_SECRET: ${{ vars.MY_VAR}}
         run: |
           echo "test secret: ${TEST_SECRET:0:4}"
